@@ -1,0 +1,68 @@
+# Find pairs
+
+## Description
+
+This is a Python script that takes a file as input and finds pairs of integers from a list that sum to a given value, where the list of integers and the target value are read from the input file. 
+
+## Implementation
+
+The find_pairs function takes two arguments, a list of integers and a target value, and returns a list of pairs of integers that sum to the target value. The function uses a dictionary to keep track of the numbers that have been seen so far, and for each number in the list, it checks if the difference between the target value and the number is in the dictionary. If it is, then it adds the pair to the list of pairs.
+
+The main function uses the argparse module to parse the command line arguments, which in this case is just the name of the input file. It then reads the file contents, extracts the list of integers and the target value, calls the find_pairs function to find the pairs, and prints the pairs to the console in the format + num1,num2.
+
+This script was written in Python 3.9.2.
+
+## Usage
+
+To run the script, you would need to create a text file with the list of integers and the target value separated by a newline character, and then run the script with the name of the file as an argument. A sample file is included in the repository, called sample.txt. To run the script, you would do the following:
+
+```bash
+python find_pairs.py <filename>
+```
+
+where `<filename>` is the name of a file containing a list of numbers, one per line.
+
+## Example
+
+For example, if you create a file called numbers.txt with the following contents:
+```bash
+cat numbers.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+Then you can run the script with the following command:
+```bash
+python find_pairs.py numbers.txt
+(1, 9)
+(2, 8)
+(3, 7)
+(4, 6)
+```
+
+## Testing
+This project includes a test suite in find_pairs_test.py. To run the tests, open a terminal or command prompt and navigate to the directory where the find_pairs_test.py file is located. Then, run the following command:
+```bash
+python find_pairs_test.py
+```
+The test suite includes tests for various input scenarios, including an empty list, a list with one item, a list with no pairs that sum to target, a list with one pair that sum to target, a list with multiple pairs that sum to target, a list with negative numbers, and a large input list with even and odd number of elements.
+
+## License
+
+This software is licensed under the MIT License.
+
+## Author
+
+This software was written by [dabocanegrac](github.com/dabocanegrac)
+
+## Acknowledgements
+
+This coding challenge was provided by MachEight.
+

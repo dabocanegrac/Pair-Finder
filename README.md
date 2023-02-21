@@ -54,6 +54,16 @@ python find_pairs_test.py
 ```
 The test suite includes tests for various input scenarios, including an empty list, a list with one item, a list with no pairs that sum to target, a list with one pair that sum to target, a list with multiple pairs that sum to target, a list with negative numbers, and a large input list with even and odd number of elements.
 
+This project also includes a random test data generator and a script to run the tests with random data. To run the tests with random data, open a terminal or command prompt and navigate to the directory where the *find_pairs_test_random.py* file is located. Then, run the following command:
+```bash
+python find_pairs_test_random.py
+```
+The script will generate a random list of integers and a random target value, and then run the tests with the random data. The script will run the tests 100 times, and will print the number of times the tests passed and the number of times the tests failed. The script will also print the list of integers and the target value if the tests fail, it will generate the expected pairs using brute force and compare them with the pairs returned by the *find_pairs* function.
+
+You can change the arguments of the *generate_test_data* call inside the main function of *find_pairs_test_random.py* to change the number of elements in the list and the range of the numbers in the list. The default values are 100 elements and numbers between -50 and 50.
+
+This file also provides a function called *compare_pairs* that can be used to compare the results of two different implementations of the *find_pairs* function.
+
 ## License
 
 This software is licensed under the **MIT License**.
